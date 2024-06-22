@@ -1,0 +1,18 @@
+			# TRABAJO DE INVESTIGACIÓN DE OPERACIONES #
+						# CHARLIE MASCOTAS#
+			# NICOLAS REYES - AMARO SAEZ - MATHEW ZAP #
+			# ING CIVIL INDUSTRIAL UACH. - PTO MONTT  #
+
+
+option solver cplex;
+model CharlieMascotas.mod;
+data CharlieMascotas.dat;
+solve;
+
+display UnidadesCompradas > "ResultadosVariables/UnidadesCompradas.txt";
+display UnidadesVendidas > "ResultadosVariables/UnidadesVendidas.txt";
+display MovimientosProductos > "ResultadosVariables/MovimientosProductos.txt";
+display InventarioFinal > "ResultadosVariables/InventarioFinal.txt";
+display CantidadViajes > "ResultadosVariables/CantidadViajes.txt";
+display BinarioEntrega > "ResultadosVariables/BinarioEntrega.txt";
+

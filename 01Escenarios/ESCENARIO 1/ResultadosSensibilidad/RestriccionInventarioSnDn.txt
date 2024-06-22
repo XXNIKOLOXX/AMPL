@@ -1,0 +1,17 @@
+# $2 = RestriccionInventarioSnDn.dual
+# $4 = RestriccionInventarioSnDn.ub
+:     RestriccionInventarioSnDn  $2 RestriccionInventarioSnDn.lb  $4    :=
+1 2 2              0              0               0                0
+1 2 3              0              0               0                0
+1 2 4              0              0               0                0
+1 2 5              0              0               0                0
+1 2 6              0              0               0                0
+1 2 7              0              0               0                0
+2 2 2              0              0               0                0
+2 2 3              0              0               0                0
+2 2 4              0              0               0                0
+2 2 5              0              0               0                0
+2 2 6              0              0               0                0
+2 2 7              0              0               0                0
+;
+

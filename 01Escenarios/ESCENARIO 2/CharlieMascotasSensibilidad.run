@@ -1,0 +1,30 @@
+			# TRABAJO DE INVESTIGACIÓN DE OPERACIONES #
+						# CHARLIE MASCOTAS#
+			# NICOLAS REYES - AMARO SAEZ - MATHEW ZAP #
+			# ING CIVIL INDUSTRIAL UACH. - PTO MONTT  #
+
+option solver cplex;
+option cplex_options 'sensitivity';
+
+model CharlieMascotas.mod;
+data CharlieMascotas.dat;
+solve;
+
+
+# Exportar resultados de las variables de decisión
+display UnidadesCompradas, UnidadesCompradas.lb, UnidadesCompradas.ub, UnidadesCompradas.rc > ResultadosSensibilidad/UnidadesCompradas.txt;
+display UnidadesVendidas, UnidadesVendidas.lb, UnidadesVendidas.ub, UnidadesVendidas.rc > ResultadosSensibilidad/UnidadesVendidas.txt;
+display MovimientosProductos, MovimientosProductos.lb, MovimientosProductos.ub, MovimientosProductos.rc > ResultadosSensibilidad/MovimientosProductos.txt;
+display InventarioFinal, InventarioFinal.lb, InventarioFinal.ub, InventarioFinal.rc > ResultadosSensibilidad/InventarioFinal.txt;
+display CantidadViajes, CantidadViajes.lb, CantidadViajes.ub, CantidadViajes.rc > ResultadosSensibilidad/CantidadViajes.txt;
+display BinarioEntrega, BinarioEntrega.lb, BinarioEntrega.ub, BinarioEntrega.rc > ResultadosSensibilidad/BinarioEntrega.txt;
+
+# Exportar resultados de las restricciones
+display RestriccionBinarioEntrega, RestriccionBinarioEntrega.dual, RestriccionBinarioEntrega.lb, RestriccionBinarioEntrega.ub > ResultadosSensibilidad/RestriccionBinarioEntrega.txt;
+display RestriccionViajesCargas, RestriccionViajesCargas.dual, RestriccionViajesCargas.lb, RestriccionViajesCargas.ub > ResultadosSensibilidad/RestriccionViajesCargas.txt;
+display RestriccionInventario, RestriccionInventario.dual, RestriccionInventario.lb, RestriccionInventario.ub > ResultadosSensibilidad/RestriccionInventario.txt;
+display RestriccionInventarioS1D1, RestriccionInventarioS1D1.dual, RestriccionInventarioS1D1.lb, RestriccionInventarioS1D1.ub > ResultadosSensibilidad/RestriccionInventarioS1D1.txt;
+display RestriccionInventarioS1Dn, RestriccionInventarioS1Dn.dual, RestriccionInventarioS1Dn.lb, RestriccionInventarioS1Dn.ub > ResultadosSensibilidad/RestriccionInventarioS1Dn.txt;
+display RestriccionInventarioSnD1, RestriccionInventarioSnD1.dual, RestriccionInventarioSnD1.lb, RestriccionInventarioSnD1.ub > ResultadosSensibilidad/RestriccionInventarioSnD1.txt;
+display RestriccionInventarioSnDn, RestriccionInventarioSnDn.dual, RestriccionInventarioSnDn.lb, RestriccionInventarioSnDn.ub > ResultadosSensibilidad/RestriccionInventarioSnDn.txt;
+display RestriccionVentas, RestriccionVentas.dual, RestriccionVentas.lb, RestriccionVentas.ub > ResultadosSensibilidad/RestriccionVentas.txt;

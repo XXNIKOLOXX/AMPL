@@ -1,0 +1,5 @@
+UnidadesCompradas [*] :=
+1  63
+2  56
+;
+

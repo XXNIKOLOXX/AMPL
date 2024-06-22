@@ -1,0 +1,6 @@
+# $2 = UnidadesCompradas.lb
+: UnidadesCompradas  $2 UnidadesCompradas.ub UnidadesCompradas.rc    :=
+1         31          0           55                 -29476
+2         30          0           53                 -11989
+;
+

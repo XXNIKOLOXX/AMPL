@@ -1,0 +1,91 @@
+				
+			# COMENZAMOS DEFINIENDO LOS VALORES NUMERICOS DEL TOTAL DE CADA UNO DE NUESTROS CONJUNTOS #
+			
+param CantidadProductos := 2;
+param CantidadSucursales := 2;
+param CantidadVehiculos := 2;
+param DiasDeLaSemana := 7;
+
+	# [Vehiculo l, carga en litros]
+param VolumenCargaVehiculo :=
+    1 884      							# Corresponde a la camioneta
+    2 3050;  							# Corresponde al Furgon
+
+	# [Producto i, volumen en litros]
+param VolumenProducto :=
+    1 48  								# Corresponde a Nómade Perro
+    2 17; 								# Corresponde a Arena Minino
+	
+	# [Producto i, Sucursal j, #StockMaximo#]
+param StockMaximo :=
+    1 1 50  							# Corresponde al Stock Máximo de Nómade Perro en Alerce
+    1 2 5								# Corresponde al Stock Máximo de Nómade Perro en Muermos
+    2 1 40   							# Corresponde al Stock Máximo de Arena Minino en Alerce
+    2 2 4; 								# Corresponde al Stock Máximo de Arena Minino en Muermos
+
+	# [Producto i, #PrecioCompra#]
+param PrecioCompra :=					
+    1 29476  							# Corresponde al Precio de Compra de Nómade Perro
+    2 11989;  							# Corresponde al Precio de Compra de Arena Minino
+
+	# [Producto i, Sucursal j, #PrecioVenta#]
+param PrecioVenta :=
+    1 1 36990  							# Corresponde al Precio Vta Nomade Alerce
+    1 2 36990   						# Corresponde al Precio Vta Nomade Muermos
+    2 1 20990   						# Corresponde al Precio Vta Arena Alerce
+    2 2 20990;							# Corresponde al Precio Vta Arena Muermos
+
+	# [SucursalSubset k, Vehiculo l, #CostoTransporte#]
+param CostoTransporte :=
+    2 1 10118 							# Viaje a Muermos en Camioneta 
+    2 2 13394;  						# Viaje a Muermos en Furgón
+	
+	# [Productos i, #DiaDeEntrega#]
+param DiaDeEntrega :=
+    1 1									# Nomade perro llega el dia 1 Lunes								 			  
+    2 3;  								# Arena Minino llega el dia 3 Miercoles
+	
+	# [Producto i, Sucursal j, día m, #Demanda#]
+param DemandaProductoSucursal := 
+    1 1 1 9								# Nomade Perro / Alerce / 1							  
+    1 1 2 5   							# Nomade Perro / Alerce / 2
+    1 1 3 8								# Nomade Perro / Alerce / 3
+    1 1 4 2   							# Nomade Perro / Alerce / 4				
+    1 1 5 6    							# Nomade Perro / Alerce / 5
+	1 1 6 6 							# Nomade Perro / Alerce / 6     
+    1 1 7 4								# Nomade Perro / Alerce / 7
+    1 2 1 0								# Nomade Perro / Muermos / 1							  
+    1 2 2 1   							# Nomade Perro / Muermos / 2
+    1 2 3 2								# Nomade Perro / Muermos / 3
+    1 2 4 0   							# Nomade Perro / Muermos / 4				
+    1 2 5 0    							# Nomade Perro / Muermos / 5
+	1 2 6 0 							# Nomade Perro / Muermos / 6     
+    1 2 7 0								# Nomade Perro / Muermos / 7
+    2 1 1 5								# Arena / Alerce / 1							  
+    2 1 2 7   							# Arena / Alerce / 2
+    2 1 3 5								# Arena / Alerce / 3
+    2 1 4 5   							# Arena / Alerce / 4				
+    2 1 5 8    							# Arena / Alerce / 5
+	2 1 6 5 							# Arena / Alerce / 6     
+    2 1 7 5								# Arena / Alerce / 7
+    2 2 1 1								# Arena / Muermos / 1							  
+    2 2 2 0   							# Arena / Muermos / 2
+    2 2 3 0								# Arena / Muermos / 3
+    2 2 4 0   							# Arena / Muermos / 4				
+    2 2 5 1    							# Arena / Muermos / 5
+	2 2 6 1 							# Arena / Muermos / 6     
+    2 2 7 0;							# Arena / Muermos / 7
+    
+    
+    
+  
+    # [Producto i, Sucursal j, #InventarioInicialSucursal]
+param InventarioInicialSucursal :=
+	1 1	10								# NomadePerro / Alerce
+	1 2 2								# NomadePerro / Muermos
+	2 1 0								# Arena / Alerce
+	2 2 1;								# Arena / Muermos
+	
+	
+	
+

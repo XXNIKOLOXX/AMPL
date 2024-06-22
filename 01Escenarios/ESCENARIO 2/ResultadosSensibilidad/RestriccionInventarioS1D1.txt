@@ -1,0 +1,7 @@
+# $3 = RestriccionInventarioS1D1.lb
+# $4 = RestriccionInventarioS1D1.ub
+: RestriccionInventarioS1D1 RestriccionInventarioS1D1.dual   $3    $4     :=
+1                0                            0              -10   -10
+2           -20990                       -20990                0     0
+;
+
