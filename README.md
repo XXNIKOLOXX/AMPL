@@ -1,7 +1,5 @@
 📦✨ Optimización de Inventarios y Logística en Charlie Mascotas 🐾🚚
 
-En este video, te mostramos cómo nuestro modelo ayuda a Charlie Mascotas a maximizar sus ingresos 💰 y minimizar sus costos 🚀. Descubre cómo logramos una distribución eficiente entre sucursales 🏪📦 y una gestión precisa de inventarios 🗂️📊.
-
 🔍 Características del Modelo:
 
 Uso de variables binarias para controlar días de entrega 📅✅
